@@ -1,10 +1,8 @@
-<!doctype html>
-<html>
-    <h3>INDEX PAGE</h3>
-    {{data}}
-<a href="/register">register</a>
-<a href="/login">login</a>
-
-
-
-</html>
+{% extends "base.html" %}
+ 
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }}: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
