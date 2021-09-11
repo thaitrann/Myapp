@@ -11,4 +11,4 @@ migrate = Migrate(app, db)
 from .index import index
 from .register import register
 from .login import login
-from .models import user
+from .models import user, note
