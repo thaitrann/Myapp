@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=E:\MyDesktop\ThaiTran\Personal_Project\Note_uploadfile\myenv
+set VIRTUAL_ENV=E:\MyDesktop\ThaiTran\Personal_Project\Myapp\myenv
 
 if not defined PROMPT set PROMPT=$P$G
 

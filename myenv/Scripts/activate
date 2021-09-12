@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="E:\MyDesktop\ThaiTran\Personal_Project\Note_uploadfile\myenv"
+VIRTUAL_ENV="E:\MyDesktop\ThaiTran\Personal_Project\Myapp\myenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
