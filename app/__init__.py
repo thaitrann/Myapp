@@ -8,11 +8,12 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-login = LoginManager(app)
+login_mgr = LoginManager(app)
 
-from .index import index
+from .home import home
 from .register import register
 from .login import login
+from .index import index
 # from .models import user, note
 
 from app import db
