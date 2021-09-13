@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h1>Home</h1>
-    <h2>Hi, {{current_user.email}}!</h2>
-    {% for note in current_user.notes %}
-    <div><p>{{note.body}} - time: {{note.timestamp}} </p></div>
-    {% endfor %}
-{% endblock %}
