@@ -13,17 +13,17 @@
 │    │
 │    │───models(db)
 │    │   └───note.py
-│    │    └───user.py
+│    │   └───user.py
 │    │   
 │    │───register
 │    │   └───register.py
-│    │    └───register_forms.py
+│    │   └───register_forms.py
 │    │
 │    │───templates
 │    │   └───base.html
-│    │    └───home.html
-│    │    └───login.html
-│    │    └───register.html
+│    │   └───home.html
+│    │   └───login.html
+│    │   └───register.html
 │    │
 │    ├───__init__.py
 │       
