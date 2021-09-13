@@ -1,4 +1,5 @@
 # Myapp using Flask + SQL Server 
+```bash
 │───app
 │    ├───home
 │    │   └───home.py
@@ -35,3 +36,4 @@
 │───myapp.py
 │
 │───README.md(this file)
+```
