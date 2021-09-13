@@ -1,7 +1,9 @@
+from app.models.user import User
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms import validators
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, ValidationError
+from app.models.user import User
 
 class RegisterForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), validators.Email()])
@@ -17,3 +19,9 @@ class RegisterForm(FlaskForm):
     ])
 
     register = SubmitField('Register')
+
+    def validateEmail(self, email):
+        user = User.query.filter_by(email = email.data).first()
+        if user:
+            raise ValidationError('Please use different email!')
+    
