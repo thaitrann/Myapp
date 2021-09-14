@@ -3,6 +3,7 @@
 │───app
 │    ├───email
 │    │   └───email.py
+│    │   └───email_forms.py
 │    │
 │    ├───home
 │    │   └───home.py
