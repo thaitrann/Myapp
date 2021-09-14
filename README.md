@@ -1,9 +1,12 @@
 # Myapp using Flask + SQL Server 
 ```bash
 │───app
+│    ├───email
+│    │   └───email.py
+│    │
 │    ├───home
 │    │   └───home.py
-│    
+│    │
 │    ├───index
 │    │   └───index.py
 │    │

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_mail import Mail
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -10,12 +11,13 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login_mgr = LoginManager(app)
 login_mgr.login_view = 'login'
+mail = Mail(app)
 
 from .home import home
 from .register import register
 from .login import login
 from .index import index
-# from .models import user, note
+from .email import email
 
 from app import db
 from .models.user import User

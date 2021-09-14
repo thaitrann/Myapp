@@ -20,8 +20,8 @@ class RegisterForm(FlaskForm):
 
     register = SubmitField('Register')
 
-    def validateEmail(self, email):
+    def validate_email(self, email):
         user = User.query.filter_by(email = email.data).first()
-        if user:
+        if user is not None:
             raise ValidationError('Please use different email!')
     
