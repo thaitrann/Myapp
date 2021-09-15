@@ -1,0 +1,17 @@
+{% extends "register" %}
+ 
+{% block content %}
+    <h1>Authentication</h1>
+    <form action="" method="post">
+        {{ authform.hidden_tag() }}
+        <h2>Sent OTP to: {{ email }} </h2> 
+        <p>
+            {{ authform.authentication.label }}<br>
+            {{ authform.authentication() }}
+            {% for error in authform.authentication.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ authform.submit() }}</p>
+    </form>
+{% endblock %}
