@@ -6,10 +6,11 @@ from app import app
 from .register_forms import RegisterForm
 from flask_login import current_user
 from app import db
-from app.email.email import sendMail
+from app.email.email import sendMail, OTP
 from app.email.email_forms import AuthForm
 
-@app.route('/register', methods = ["GET", "POST"])  
+
+@app.route('/register', methods=["GET", "POST"])
 def register():
     # content = 'test mail flask'
     # sendMail('test mail flask shell', email, content)
@@ -18,15 +19,12 @@ def register():
         return redirect(url_for('home'))
 
     if form.validate_on_submit():
-        user = User(email = form.email.data)
+        user = User(email=form.email.data)
         user.setPassword(form.password.data)
+        json = jsonify(email=user.email, password=user.password_hash)
+        return redirect(url_for('otp'))
+
         # db.session.add(user)
         # db.session.commit()
-        return True
 
-    return render_template('register.html', title = 'Register', form = form)
-
-@app.route('/otp', methods = ["GET", "POST"])  
-def OTP():
-    return True
-   
+    return render_template('register.html', title='Register', form=form)
